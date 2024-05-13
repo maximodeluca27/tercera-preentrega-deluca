@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Aviones</title>
+</head>
+<body style="background-color: #0c7081; font-family: Verdana, Geneva, Tahoma, sans-serif; color: #d1c6c6;">
+    <h1>Lista Aviones</h1>
+    {% for avion in aviones %}
+    <h2>{{avion}}</h2>
+    <p> {{avion.fabricante}} </p>
+    <p> {{avion.modelo}} </p>
+    <p> {{avion.avion_origen_id}} </p>
+    {% endfor %}
+    <button><a href="{% url "avion:index" %}">Ir a Aviones</a></button>
+</body>
+</html>
