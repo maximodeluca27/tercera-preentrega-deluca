@@ -4,9 +4,13 @@
 {% endblock title %}
 
 {%  block content %}
-    <h1>App Avion</h1>
+
+{% block  body_title %}
+App Avion
+{% endblock body_title %}
+    
     <div>
         <button><a href="{% url "avion:avion_list" %}">Lista de Aviones Registrados</a></button>
-        
+        <button><a href="{% url "avion:avion_create" %}">Crear Avion</a></button>
     </div>
     {%  endblock content %}

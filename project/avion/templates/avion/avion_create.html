@@ -1,0 +1,20 @@
+{% extends "core/base.html" %}
+{%  block title %}
+    Aviones
+{% endblock title %}
+
+{% block  body_title %}
+Registrar Avion 
+{% endblock body_title %}
+
+{%  block content %}
+
+
+<form action="" method="post">
+
+{% csrf_token %}  
+{{form}}  
+<button type="submit">Guardar</button>
+</form>
+
+{% endblock content %}
