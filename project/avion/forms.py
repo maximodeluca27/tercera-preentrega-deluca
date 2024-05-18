@@ -10,4 +10,4 @@ class AvionForm(forms.ModelForm):
 class AeropuertoForm(forms.ModelForm):
     class Meta: 
         model=models.Aeropuerto
-        fields={"nombre"}
+        fields={"nombre","pais_origen"}

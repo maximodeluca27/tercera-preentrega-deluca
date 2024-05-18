@@ -9,8 +9,9 @@ class Cliente(models.Model):
     
 class Aeropuerto(models.Model):
     nombre=models.CharField(max_length=40)
+    pais_origen=models.CharField(max_length=40)
     def __str__(self) -> str:
-        return self.nombre
+        return f"{self.nombre} {self.pais_origen} "
 
 class Avion(models.Model):
     fabricante=models.CharField(max_length=40)
