@@ -1,0 +1,21 @@
+{% extends "core/base.html" %}
+{%  block title %}
+    Aeropuerto detalle
+{% endblock title %}
+
+
+{%  block body_title %}
+    Aeropuerto vista en detalle
+{% endblock body_title %}
+
+{%  block content %}
+    <ul>
+        <li>Nombre: {{aeropuerto.nombre}}</li>
+        <li>Pais: {{aeropuerto.pais_origen}}</li>
+    </ul>
+
+    <div>
+        <a href="{% url "avion:aeropuertos_list"%}" style="display: inline-block; padding: 8px 12px; color: white; background: #007BFF; border-radius: 4px; text-decoration: none; ">Volver</a>
+    </div>
+
+    {% endblock content %}

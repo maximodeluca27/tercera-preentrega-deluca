@@ -37,4 +37,9 @@ def aeropuertos_list(request):
     contexto={"aeropuertos":consulta}
     return render(request,"avion/aeropuertos_list.html",contexto)
 
+def aeropuerto_detail(request,pk:int):
+    consulta=Aeropuerto.objects.get(id=pk)
+    contexto={"aeropuerto":consulta}
+    return render(request,"avion/aeropuerto_detail.html",contexto)
+
 # Create your views here.

@@ -5,7 +5,11 @@
 
 {%  block content %}
     <h1>Lista Aeropuertos</h1>
+    <ul>
     {% for aeropuerto in aeropuertos %}
-    <h2>{{aeropuerto}}</h2>
+    <li>{{aeropuerto.nombre}}
+        <a href="{% url "avion:aeropuerto_detail" aeropuerto.id %}">Detalle</a>
+    </li>
     {% endfor %}
+    </ul>
     {% endblock content %}
