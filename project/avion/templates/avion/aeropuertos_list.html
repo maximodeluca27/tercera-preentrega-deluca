@@ -5,6 +5,10 @@
 
 {%  block content %}
     <h1>Lista Aeropuertos</h1>
+
+    <form action="{% url "avion:aeropuertos_list" %}" method="get">
+        <input type="text" name="busqueda" placeholder="buscar..."> 
+    </form>
     <ul>
     {% for aeropuerto in aeropuertos %}
     <li>{{aeropuerto.nombre}}

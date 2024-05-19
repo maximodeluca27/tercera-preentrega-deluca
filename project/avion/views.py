@@ -33,7 +33,12 @@ def aeropuerto_create(request):
     return render(request,"avion/aeropuerto_create.html",{"form":form})
 
 def aeropuertos_list(request):
-    consulta=Aeropuerto.objects.all()
+    busqueda=request.GET.get("busqueda",None)
+    if busqueda:
+        print(busqueda)
+        consulta=Aeropuerto.objects.filter(nombre__icontains=busqueda)
+    else:
+         consulta=Aeropuerto.objects.all()
     contexto={"aeropuertos":consulta}
     return render(request,"avion/aeropuertos_list.html",contexto)
 
