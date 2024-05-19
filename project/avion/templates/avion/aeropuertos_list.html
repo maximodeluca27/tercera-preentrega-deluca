@@ -9,6 +9,8 @@
     {% for aeropuerto in aeropuertos %}
     <li>{{aeropuerto.nombre}}
         <a href="{% url "avion:aeropuerto_detail" aeropuerto.id %}">Detalle</a>
+        <a href="{% url "avion:aeropuerto_update" aeropuerto.id %}">Cambiar</a>
+        <a href="{% url "avion:aeropuerto_delete" aeropuerto.id %}">Borrar</a>
     </li>
     {% endfor %}
     </ul>

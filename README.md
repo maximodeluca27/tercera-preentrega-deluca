@@ -1,8 +1,14 @@
-tercera preentrega del curso de python de coderhouse 
-Dentro del proyecto hay una aplicacion llamada avion donde se incluyen los modelos a utilizar
+# Nombre del Proyecto 
+> VirtualPLanes
 
-# comandos
 
+# Breve Explicacion
+> Cree un proyecto django para fanaticos de aviacion comercial. Registra aviones, y puede borrar, crear y modificar aeropuertos internacionales. 
+
+# Explicacion Tecnica
+esta el proyecto que tiene el nombre de la preentrega, y dentro de el cree la aplicacion avion. Hay dos clases, aeropuerto y avion, registradas ambas en el models.py de la app avion. 
+
+# Comandos
 `mkdir TERCERA-PREENTREGA-DELUCA`
 > Crea una carpeta llamada project
 

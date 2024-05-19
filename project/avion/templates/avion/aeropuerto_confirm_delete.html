@@ -4,22 +4,22 @@
 {% endblock title %}
 
 {% block  body_title %}
-    {% if  form.instance.pk %}
-       Editar Aeropuerto 
-    {% else  %}
-        Crear Aeropuerto
-    {% endif  %}
+    Eliminar Aeropuerto
 
 {% endblock body_title %}
 
 {%  block content %}
 
+<p class="fs-5 fst-italic">Confirma eliminar "{{object.nombre}}"? </p>
 
 <form action="" method="post">
 
 {% csrf_token %}  
-{{form}}  
-<button type="submit">Guardar</button>
+
+<button type="submit">Confirmar</button>
+
 </form>
+
+<a href="{% url "avion:aeropuertos_list" %}">Volver</a>
 
 {% endblock content %}

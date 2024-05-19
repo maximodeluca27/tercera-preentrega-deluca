@@ -42,4 +42,22 @@ def aeropuerto_detail(request,pk:int):
     contexto={"aeropuerto":consulta}
     return render(request,"avion/aeropuerto_detail.html",contexto)
 
+def aeropuerto_update(request, pk:int):
+    consulta=Aeropuerto.objects.get(id=pk)
+    if request.method == "POST":
+        form=AeropuertoForm(request.POST,instance=consulta)
+        if form.is_valid():
+            form.save()
+            return redirect("avion:aeropuertos_list")
+    else:
+        form=AeropuertoForm(instance=consulta)
+    return render(request,"avion/aeropuerto_create.html",{"form":form})
+
+def aeropuerto_delete(request, pk:int):
+    consulta=Aeropuerto.objects.get(id=pk)
+    if request.method == "POST":
+        consulta.delete()
+        return redirect("avion:aeropuertos_list")
+    return render(request,"avion/aeropuerto_confirm_delete.html",{"object":consulta})
+
 # Create your views here.
