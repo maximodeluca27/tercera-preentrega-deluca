@@ -7,8 +7,10 @@
     <h1>Lista Aviones</h1>
     {% for avion in aviones %}
     <h2>{{avion}}</h2>
-    <p> {{avion.fabricante}} </p>
-    <p> {{avion.modelo}} </p>
-    <p> {{avion.avion_origen_id}} </p>
+    <p> Fabricante: {{avion.fabricante}} </p>
+    <p> Modelo: {{avion.modelo}} </p>
+    <p> Origen: {{avion.avion_origen_id}} </p>
+    <p> Fecha incorporacion: {{avion.fecha_incorporacion}} </p>
+    <p> Capacidad Maxima Pasajeros: {{avion.capacidad_maxima}} </p>
     {% endfor %}
     {% endblock content %}
