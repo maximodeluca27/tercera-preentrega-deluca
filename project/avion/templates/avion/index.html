@@ -3,12 +3,12 @@
     Aviones
 {% endblock title %}
 
-{%  block content %}
+
 
 {% block  body_title %}
 App Avion
 {% endblock body_title %}
-    
+{%  block content %}   
     <div>
         <button><a href="{% url 'avion:avion_list' %}" style="display: inline-block; padding: 8px 12px; color: white; background: #007BFF; border-radius: 4px; text-decoration: none;">Lista de Aviones Registrados</a></button>
         <button><a href="{% url "avion:avion_create" %}"style="display: inline-block; padding: 8px 12px; color: white; background: #007BFF; border-radius: 4px; text-decoration: none;">Crear Avion</a></button>
