@@ -9,6 +9,9 @@
         <!-- Header-->
         <header class="py-5">
             <div class="container px-lg-5">
+                {%  if user.is_authenticated %}
+                <p class="text-info">{{mensaje}} Bienvenido</p>
+                {% endif %}
                 <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
                     <div class="m-4 m-lg-5">
                         <h1 class="display-5 fw-bold">Bienvenido a la VirtualPlanes!</h1>
