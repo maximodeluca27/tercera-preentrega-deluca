@@ -1,12 +1,15 @@
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import User
 
-class Cliente(models.Model):
-    nombre=models.CharField(max_length=40)
-    pasajes=models.IntegerField()
+class Usuario(models.Model):
+    nombre=models.CharField(max_length=40,default="nombre por defecto")
+    usuario=models.OneToOneField(User,on_delete=models.CASCADE,related_name="usuario",null=True,blank=True)
+    celular=models.IntegerField()
+    avatar=models.ImageField(upload_to="avatares",null=True,blank=True)
 
     def __str__(self) -> str:
-        return self.nombre
+        return self.usuario.username
     
 class Aeropuerto(models.Model):
     nombre=models.CharField(max_length=40)

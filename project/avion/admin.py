@@ -1,8 +1,9 @@
 from django.contrib import admin
-from .models import Cliente,Avion,Aeropuerto
+from avion.models import Usuario,Aeropuerto,Avion
 
-admin.site.register(Cliente)
+admin.site.register(Usuario)
 admin.site.register(Aeropuerto)
 admin.site.register(Avion)
+
 
 # Register your models here.

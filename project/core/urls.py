@@ -1,3 +1,4 @@
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.urls import path
 from core.views import index, CustomLoginView, contacto, register
 from django.contrib.auth.views import LogoutView
@@ -11,3 +12,5 @@ urlpatterns=[
     path("contacto/",contacto,name="contacto" ),
     path("register/",register,name="register")
 ]
+
+urlpatterns += staticfiles_urlpatterns()

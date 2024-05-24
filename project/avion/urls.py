@@ -1,3 +1,4 @@
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.urls import path
 from avion.views import index,avion_list,avion_create,aeropuerto_create,aeropuerto_detail,aeropuerto_update,aeropuerto_delete
 from avion.views import Aeropuertos_list
@@ -14,3 +15,5 @@ urlpatterns=[
     path("avion/aeropuerto_update/<int:pk>",aeropuerto_update,name="aeropuerto_update"),
     path("avion/aeropuerto_delete/<int:pk>",aeropuerto_delete,name="aeropuerto_delete"),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
