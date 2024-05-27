@@ -6,7 +6,10 @@
 > Cree un proyecto django para fanaticos de aviacion comercial. Registra aviones, y puede borrar, crear y modificar aeropuertos internacionales. 
 
 # Explicacion Tecnica
-esta el proyecto que tiene el nombre de la preentrega, y dentro de el cree la aplicacion avion. Hay dos clases, aeropuerto y avion, registradas ambas en el models.py de la app avion. 
+esta el proyecto que tiene el nombre de la preentrega, y dentro de el cree las aplicaciones avion y core. Hay dos clases, aeropuerto y avion, registradas ambas en el models.py de la app avion. Tambien registre la clase usuario a la cual se puede vincular los usuarios logueados con nombres y telefonos celulares, ademas de una foto de perfil. Las fotos se pueden ver desde "media/avatares". Desde el archivo urls.py llamo a las distintas vistas en el archivo views.py. El core es la aplicacion principal y avion la secundaria. Tambien implemente formularios en el archivo forms.py, que desde las vistas podemos llamarlo para utilizarlo en la creacion de aviones, o en el CRUD de aeropuertos. 
+
+# Acerca de Mi 
+Cree una seccion acerca de mi, a la cual se puede acceder pulsando contacto
 
 # Comandos
 `mkdir TERCERA-PREENTREGA-DELUCA`
